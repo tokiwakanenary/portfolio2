@@ -45,15 +45,6 @@
             overflow: hidden;
             border: 3px solid #667eea;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .avatar-container i {
-            font-size: 2rem;
-            color: white;
         }
         
         @media (min-width: 768px) {
@@ -62,9 +53,6 @@
                 height: 120px;
                 border-width: 4px;
                 box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-            }
-            .avatar-container i {
-                font-size: 3rem;
             }
         }
         
@@ -87,13 +75,6 @@
             width: 100%;
             height: auto;
             max-width: 100%;
-            background: #f3f4f6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 200px;
-            color: #6b7280;
-            font-size: 0.875rem;
         }
         
         @media (min-width: 768px) {
@@ -337,7 +318,7 @@
         }
 
         .faq-answer.open {
-            max-height: 200px;
+            max-height: 200px; /* Adjust based on content height */
             padding: 1rem 1rem 1.5rem 1rem;
         }
 
@@ -373,7 +354,7 @@
         }
         
         .service-pricing-wrap {
-            height: 48px;
+            height: 48px; /* 割引表記を配置するスペースを確保 */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -389,23 +370,6 @@
             border: 2px solid #667eea;
         }
 
-        /* プレースホルダー画像のスタイル */
-        .placeholder-image {
-            background: linear-gradient(45deg, #f3f4f6 25%, transparent 25%, transparent 50%, #f3f4f6 50%, #f3f4f6 75%, transparent 75%, transparent);
-            background-size: 20px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: #6b7280;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .placeholder-image i {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
     </style>
 </head>
 <body class="bg-gray-50 font-noto">
@@ -413,7 +377,7 @@
         <div class="max-w-6xl mx-auto container-padding py-6 md:py-8">
             <div class="header-content">
                 <div class="avatar-container flex-shrink-0">
-                    <i class="fas fa-user"></i>
+                    <img loading="eager" src="IMG_9468.webp" alt="プロフィール画像" class="w-full h-full object-cover">
                 </div>
                 <div class="header-text">
                     <h1>HIROKI FUJIKURA</h1>
@@ -531,7 +495,7 @@
             </div>
         </section>
 
-        <section class="bg-white rounded-xl card-shadow p-6 md:p-8 mb-8 md:mb-12 fade-in-section">
+      <section class="bg-white rounded-xl card-shadow p-6 md:p-8 mb-8 md:mb-12 fade-in-section">
             <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">制作プロセス（5ステップ）</h2>
             <div class="grid gap-6 md:grid-cols-5">
                 <div class="text-center">
@@ -573,10 +537,7 @@
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-building"></i>
-                                <span>不動産フィード画像 1</span>
-                            </div>
+                            <img loading="lazy" src="fudosan_1.webp" alt="不動産フィード 1" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">日本人夫婦のマレーシア移住がテーマ。「空の広さまでが、間取りになる」というコンセプトを提示します。超高層レジデンスのスケール感が、海外での成功や豊かな暮らしへの憧れを掻き立てます。</p>
@@ -584,10 +545,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-building"></i>
-                                <span>不動産フィード画像 2</span>
-                            </div>
+                            <img loading="lazy" src="fudosan_2.webp" alt="不動産フィード 2" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">レジデンスの「顔」であるエントランスの開放感を訴求。天井まで続く窓が空と内装を一体化させます。建物の中にいながら空と水面の青を感じられる、この物件ならではの価値観を表現しました。</p>
@@ -595,10 +553,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-building"></i>
-                                <span>不動産フィード画像 3</span>
-                            </div>
+                            <img loading="lazy" src="fudosan_3.webp" alt="不動産フィード 3" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">夫婦の時間を象徴する主寝室のイメージ。大きな窓から空を「インテリア」として取り込みます。「毎朝、空に最も近い場所で目を覚ます」という、非日常的な体験が日常になる暮らしを想起させます。</p>
@@ -606,10 +561,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-building"></i>
-                                <span>不動産フィード画像 4</span>
-                            </div>
+                            <img loading="lazy" src="fudosan_4.webp" alt="不動産フィード 4" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">セカンドルームで多様なライフスタイルに対応。例えばワークスペースとして、夫婦がそれぞれの時間を大切にしながら同じ空の下で繋がる。そんな新しい暮らしの形を提案する一枚です。</p>
@@ -617,10 +569,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-building"></i>
-                                <span>不動産フィード画像 5</span>
-                            </div>
+                            <img loading="lazy" src="fudosan_5.webp" alt="不動産フィード 5" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">バルコニーからの眺望をパノラマで。物理的な広さだけでなく、心理的な開放感を伝えます。「この景色が全て手に入る」という所有欲を掻き立て、移住という大きな決断を後押しします。</p>
@@ -628,10 +577,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-building"></i>
-                                <span>不動産フィード画像 6</span>
-                            </div>
+                            <img loading="lazy" src="fudosan_6.webp" alt="不動産フィード 6" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">暮らしのリアリティを感じさせるキッチン空間。ミニマルで洗練されたデザインが魅力です。ラグジュアリーな世界観と日常の機能性が両立していることを伝え、生活の質にこだわる層へ訴求します。</p>
@@ -639,10 +585,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-building"></i>
-                                <span>不動産フィード画像 7</span>
-                            </div>
+                            <img loading="lazy" src="fudosan_7.webp" alt="不動産フィード 7" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">プライベートなパウダールームにも、上質な素材とデザインを採用している点を紹介。細部まで妥協しない姿勢を伝え、レジデンス全体のクオリティに対する信頼感を醸成することを狙います。</p>
@@ -650,10 +593,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-building"></i>
-                                <span>不動産フィード画像 8</span>
-                            </div>
+                            <img loading="lazy" src="fudosan_8.webp" alt="不動産フィード 8" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">このレジデンスが提供する「究極の日常」を象徴する一枚。バスタブから摩天楼を眺める映画のワンシーンのような体験を切り取りました。ターゲットの心を掴み、憧れを最大化させる狙いです。</p>
@@ -661,10 +601,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-building"></i>
-                                <span>不動産フィード画像 9</span>
-                            </div>
+                            <img loading="lazy" src="fudosan_9.webp" alt="不動産フィード 9" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">一連の投稿で高まった興味をアクションへ繋げるCTA投稿です。『空と暮らす』というコンセプトを再提示し、内覧予約や個別相談への導線を明示。スムーズな問い合わせを目的としています。</p>
@@ -678,10 +615,7 @@
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-coffee"></i>
-                                <span>カフェフィード画像 1</span>
-                            </div>
+                            <img loading="lazy" src="cafe_1.webp" alt="カフェフィード 1" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">AI画像生成で「ブックカフェ」のコンセプトを一枚で伝える表紙を作成しました。「食欲」と「知識欲」をキーワードに興味を引き、アカウント全体の世界観を提示することを目的としています。</p>
@@ -689,10 +623,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-coffee"></i>
-                                <span>カフェフィード画像 2</span>
-                            </div>
+                            <img loading="lazy" src="cafe_2.webp" alt="カフェフィード 2" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">「入場料3,630円」「読書狂の神域」という言葉で「何故？」という強い興味を喚起させる投稿。会話形式にすることで、アカウントが持つ独自の世界観への没入を促すことを狙いました。</p>
@@ -700,10 +631,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-coffee"></i>
-                                <span>カフェフィード画像 3</span>
-                            </div>
+                            <img loading="lazy" src="cafe_3.webp" alt="カフェフィード 3" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">AIで非現実的で美しい図書館のイメージを生成。光が差し込む幻想的な空間を表現しました。これから始まる特別な体験への期待感を高め、ブランドの上質さや独自性を視覚的に訴求します。</p>
@@ -711,10 +639,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-coffee"></i>
-                                <span>カフェフィード画像 4</span>
-                            </div>
+                            <img loading="lazy" src="cafe_4.webp" alt="カフェフィード 4" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">コラージュ形式でメニューの豊富さを示し「選ぶ楽しさと悩み」という共感を誘うテーマを設定。デフォルメキャラ風のイラストを差し込み、投稿にユーモアと親しみやすさを加えています。</p>
@@ -722,10 +647,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-coffee"></i>
-                                <span>カフェフィード画像 5</span>
-                            </div>
+                            <img loading="lazy" src="cafe_5.webp" alt="カフェフィード 5" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">「うまい！うまい！」というトレンドワードと表情で食事の感動を表現。SNSでシェアされやすい「ミーム」的な面白さを意識しました。エンゲージメント率の向上を狙った一枚となっています。</p>
@@ -733,10 +655,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-coffee"></i>
-                                <span>カフェフィード画像 6</span>
-                            </div>
+                            <img loading="lazy" src="cafe_6.webp" alt="カフェフィード 6" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">「しょうがないじゃん」というセリフで、食欲に対する肯定とキャラクターの人間味を即落ち2コマで表現。自身の「食いしん坊」な一面を肯定させ、親近感を抱かせるブランド設計です。</p>
@@ -744,10 +663,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-video">
-                                <i class="fas fa-play"></i>
-                                <span>カフェ動画 1</span>
-                            </div>
+                            <video class="portfolio-video" src="cafe_7.mp4" loop muted autoplay playsinline preload="metadata"></video>
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">静止画に微細な動きと環境音、BGMを加えたシネマグラフ風の動画です。ユーザーの滞在時間を延ばすことを目的としました。食後の満ち足りた静かな時間を表現し、世界観に浸らせます。</p>
@@ -755,10 +671,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-video">
-                                <i class="fas fa-play"></i>
-                                <span>カフェ動画 2</span>
-                            </div>
+                            <video class="portfolio-video" src="cafe_8.mp4" loop muted autoplay playsinline preload="metadata"></video>
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">「どか食い気絶部」「To Be Continued」という根強い人気のネットミームを二重に使用。お約束の表現とBGMで視聴者の笑いを誘う、親しみやすいオチとして動画を制作しました。</p>
@@ -766,10 +679,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div>
-                            <div class="placeholder-image portfolio-image">
-                                <i class="fas fa-coffee"></i>
-                                <span>カフェフィード画像 9</span>
-                            </div>
+                            <img loading="lazy" src="cafe_9.webp" alt="カフェフィード 9" class="portfolio-image">
                         </div>
                         <div>
                             <p class="text-gray-600 mt-3 text-xs md:text-sm text-left">InstagramのCTAとマンガ表現を掛け合わせ、アカウントのコンセプトを改めて提示します。架空プロフィール等のパワーワードを散りばめ、ユーザーの継続的なファン化を狙う動線設計です。</p>
@@ -799,7 +709,7 @@
                     <p class="text-gray-700 text-sm md:text-base">ご要望のデザインテイストに合わせ、CanvaからPhotoshop、AI画像生成（Stable Diffusion）まで柔軟に対応可能です。</p>
                 </div>
                 
-                <div class="text-center">
+                 <div class="text-center">
                     <div class="w-16 md:w-20 h-16 md:h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-globe-asia text-blue-500 text-2xl md:text-3xl"></i>
                     </div>
@@ -837,152 +747,217 @@
                 
                 <div class="flex items-start space-x-3 md:space-x-4">
                     <div class="w-10 h-10 md:w-12 md:h-12 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-play text-white text-lg md:text-xl"></i>
+                        <i class="fab fa-youtube text-white text-lg md:text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-base md:text-lg font-semibold text-gray-900">YouTubeコンサルタント</h3>
-                        <p class="text-gray-700 text-sm md:text-base">登録者0人から10万人へ、月収200万円チャンネルを構築・運営</p>
+                        <h3 class="text-base md:text-lg font-semibold text-gray-900">YouTubeコンサルタント兼ディレクター（2年間）</h3>
+                        <p class="text-gray-700 text-sm md:text-base">独立し、ゼロからチャンネルを10万人規模まで成長させる戦略を確立</p>
                     </div>
                 </div>
-                
+                             
                 <div class="flex items-start space-x-3 md:space-x-4">
                     <div class="w-10 h-10 md:w-12 md:h-12 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-globe text-white text-lg md:text-xl"></i>
+                        <i class="fas fa-edit text-white text-lg md:text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-base md:text-lg font-semibold text-gray-900">マレーシア移住・フリーランス</h3>
-                        <p class="text-gray-700 text-sm md:text-base">デジタルマーケティングとInstagram投稿制作を専門に活動</p>
+                        <h3 class="text-base md:text-lg font-semibold text-gray-900">外資系BPO企業（3.5年間）</h3>
+                        <p class="text-gray-700 text-sm md:text-base">マレーシアにてコンテンツライターとして、グローバル視点を獲得</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="bg-white rounded-xl card-shadow p-4 md:p-8 mb-8 md:mb-12 fade-in-section">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-6 md:mb-8">よくあるご質問</h2>
             
-            <div class="space-y-4">
+            <div class="bg-gray-50 rounded-lg p-4 md:p-6 mt-6 md:mt-8">
+                <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-3">持続可能な成功への転換</h3>
+                <div class="text-gray-700 text-sm md:text-base">
+                    <p class="mb-2">YouTubeでの成功体験から、過重労働ではなく「戦略的効率性」による持続可能な成長モデルの重要性を学びました。</p>
+                    <p>この学びを活かし、クライアント様にも長期的な価値創造をご提供いたします。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="bg-white rounded-xl card-shadow p-4 md:p-8 mb-8 md:mb-12 fade-in-section">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">よくあるご質問</h2>
+            <div class="max-w-4xl mx-auto">
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>制作期間はどのくらいですか？</span>
-                        <i class="fas fa-plus transition-transform duration-300"></i>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>修正回数に制限はありますか？</span>
+                        <i class="fas fa-plus text-gray-400"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>フィード投稿は通常3-5営業日、リール動画は5-7営業日での納品を予定しております。ただし、内容の複雑さやご依頼の混雑状況によって前後する場合がございます。</p>
+                        <p>フィード投稿は2回、リール動画は3回まで無料修正いたします。軽微な修正については柔軟に対応いたしますが、大幅な方向転換や追加制作が必要な場合は、別料金・納期調整となる場合があります。</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>修正は何回まで可能ですか？</span>
-                        <i class="fas fa-plus transition-transform duration-300"></i>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>納期はどの程度でしょうか？</span>
+                        <i class="fas fa-plus text-gray-400"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>基本的に2回まで無料で修正いたします。大幅な方向性の変更や追加制作が必要な場合は、別途ご相談させていただく場合がございます。</p>
+                        <p>フィード投稿：2-3営業日、リール動画：5-7営業日を目安としています。副業として対応しているため、平日は1日2-3時間、休日にまとめて作業を行います。お急ぎの場合はご相談ください。</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>どのような業界に対応可能ですか？</span>
-                        <i class="fas fa-plus transition-transform duration-300"></i>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>どのような業界に対応していますか？</span>
+                        <i class="fas fa-plus text-gray-400"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>不動産、飲食、美容、ファッション、教育、BtoB企業など様々な業界に対応可能です。まずはお気軽にご相談ください。業界特有のニーズに合わせた戦略的なアプローチをご提案いたします。</p>
+                        <p>不動産、飲食店、美容・健康、教育、コンサルティングなど幅広い業界に対応しています。業界特有のトレンドや規制を理解した上で、効果的な投稿を制作いたします。</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
+                    <div class="faq-question" onclick="toggleFaq(this)">
                         <span>素材の提供は必要ですか？</span>
-                        <i class="fas fa-plus transition-transform duration-300"></i>
+                        <i class="fas fa-plus text-gray-400"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>お客様の商品やサービスの写真があれば理想的ですが、必須ではありません。AI画像生成やストック素材を活用したクリエイティブ制作も可能です。ご要望に応じて最適な方法をご提案いたします。</p>
+                        <p>基本的にはお客様から商品・サービスの写真や情報をご提供いただきますが、ストック素材やAI画像生成も活用可能です。素材収集からサポートいたします。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white p-6 md:p-8 text-center fade-in-section">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6">お問い合わせ・ご相談</h2>
-            <p class="text-blue-100 mb-6 md:mb-8 text-sm md:text-base">あなたのInstagramを「戦略的に」成長させませんか？<br>まずはお気軽にご相談ください。</p>
-            <div class="space-y-4">
-                <a href="mailto:contact@example.com" class="btn-primary inline-block">
-                    <i class="fas fa-envelope mr-2"></i>メールでお問い合わせ
-                </a>
-                <div class="text-blue-100 text-sm">
-                    <p>お見積りは無料です。お気軽にお声がけください。</p>
+        <section class="bg-white rounded-xl card-shadow p-4 md:p-8 fade-in-section">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-6 md:mb-8">対応時間・お問い合わせ</h2>
+            
+            <div class="grid gap-6 md:gap-8 md:grid-cols-2">
+                <div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-clock text-blue-500 mr-3"></i>対応時間
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-green-500 mt-1"></i>
+                            <div>
+                                <strong class="text-sm md:text-base">ご連絡対応：</strong>
+                                <p class="text-gray-700 text-sm md:text-base">8時、13時、16時、19時以降に迅速対応</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-laptop text-purple-500 mt-1"></i>
+                            <div>
+                                <strong class="text-sm md:text-base">制作作業：</strong>
+                                <p class="text-gray-700 text-sm md:text-base">平日19時以降、土日祝日</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-tools text-blue-500 mr-3"></i>使用可能ツール
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Canva</span>
+                        <span class="bg-purple-100 text-purple-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Photoshop</span>
+                        <span class="bg-red-100 text-red-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Premiere Pro</span>
+                        <span class="bg-green-100 text-green-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Stable Diffusion</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Google Workspace</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">ChatGPT</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 md:p-6 mt-6 md:mt-8 text-center">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">まずはお気軽にご相談ください</h3>
+                <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">あなたのアカウントが持つ可能性を最大限に引き出すお手伝いをさせていただければ幸いです。</p>
+                <div class="mb-4 md:mb-6">
+                    <a href="javascript:void(0);" onclick="sendEncodedMail();" class="btn-primary text-lg px-8 py-4">
+                        <i class="fas fa-envelope mr-2"></i>メールで無料相談する
+                    </a>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-xs md:text-sm text-gray-600">
+                    <span class="flex items-center"><i class="fas fa-shield-alt text-green-500 mr-2"></i>秘密保持契約対応</span>
+                    <span class="flex items-center"><i class="fas fa-handshake text-blue-500 mr-2"></i>初回相談無料</span>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-6 md:py-8">
+    <footer class="bg-gray-900 text-white py-6 md:py-8 mt-8 md:mt-12 fade-in-section">
         <div class="max-w-6xl mx-auto container-padding text-center">
-            <p class="text-sm md:text-base">&copy; 2024 HIROKI FUJIKURA. All rights reserved.</p>
-            <p class="text-gray-400 text-xs md:text-sm mt-2">戦略的Instagram投稿制作サービス</p>
+            <p class="text-gray-400 text-sm md:text-base">&copy; 2024 HIROKI FUJIKURA. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // フェードインアニメーション
+        // スクロールアニメーション
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
+                    setTimeout(() => {
+                        entry.target.classList.add('is-visible');
+                    }, index * 100);
                 }
             });
         }, observerOptions);
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // すべての fade-in-section 要素を監視
-            const fadeElements = document.querySelectorAll('.fade-in-section');
-            fadeElements.forEach(el => observer.observe(el));
+        // すべてのセクションにアニメーションを適用
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.fade-in-section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
         });
-
-        // FAQ機能
-        function toggleFAQ(questionElement) {
-            const answerElement = questionElement.nextElementSibling;
-            const isOpen = answerElement.classList.contains('open');
+        // パフォーマンス最適化: 動画の自動再生制御
+        document.addEventListener('DOMContentLoaded', () => {
+            const videos = document.querySelectorAll('video');
             
-            // 全てのFAQを閉じる
-            document.querySelectorAll('.faq-answer').forEach(answer => {
-                answer.classList.remove('open');
-            });
-            document.querySelectorAll('.faq-question').forEach(question => {
-                question.classList.remove('active');
-            });
-            
-            // クリックされた要素が閉じていた場合のみ開く
-            if (!isOpen) {
-                answerElement.classList.add('open');
-                questionElement.classList.add('active');
-            }
-        }
-
-        // パフォーマンス最適化: 遅延読み込み
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
+            // Intersection Observer for videos
+            const videoObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
+                    const video = entry.target;
                     if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                            imageObserver.unobserve(img);
-                        }
+                        video.play().catch(e => console.log('Video play failed:', e));
+                    } else {
+                        video.pause();
                     }
                 });
+            }, {
+                threshold: 0.5
             });
 
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
+            videos.forEach(video => {
+                videoObserver.observe(video);
             });
+        });
+        
+        // FAQセクション用のJavaScript
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.fas');
+            
+            const isOpen = answer.classList.contains('open');
+            
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                ans.classList.remove('open');
+                ans.style.maxHeight = '0';
+            });
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.classList.remove('active');
+            });
+
+            if (!isOpen) {
+                element.classList.add('active');
+                answer.classList.add('open');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        }
+        
+        // メールアドレスエンコード用のJavaScript
+        function sendEncodedMail() {
+            const part1 = 'after.wisdom';
+            const part2 = '.comes.love@';
+            const part3 = 'gmail.com';
+            const email = part1 + part2 + part3;
+            window.location.href = 'mailto:' + email;
         }
     </script>
 </body>
