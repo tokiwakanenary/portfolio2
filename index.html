@@ -318,7 +318,7 @@
         }
 
         .faq-answer.open {
-            max-height: 200px; /* Adjust based on content height */
+            max-height: 200px;
             padding: 1rem 1rem 1.5rem 1rem;
         }
 
@@ -354,7 +354,7 @@
         }
         
         .service-pricing-wrap {
-            height: 48px; /* 割引表記を配置するスペースを確保 */
+            height: 48px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -369,7 +369,6 @@
         .service-card.startup {
             border: 2px solid #667eea;
         }
-
     </style>
 </head>
 <body class="bg-gray-50 font-noto">
@@ -495,7 +494,7 @@
             </div>
         </section>
 
-      <section class="bg-white rounded-xl card-shadow p-6 md:p-8 mb-8 md:mb-12 fade-in-section">
+        <section class="bg-white rounded-xl card-shadow p-6 md:p-8 mb-8 md:mb-12 fade-in-section">
             <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">制作プロセス（5ステップ）</h2>
             <div class="grid gap-6 md:grid-cols-5">
                 <div class="text-center">
@@ -709,7 +708,7 @@
                     <p class="text-gray-700 text-sm md:text-base">ご要望のデザインテイストに合わせ、CanvaからPhotoshop、AI画像生成（Stable Diffusion）まで柔軟に対応可能です。</p>
                 </div>
                 
-                 <div class="text-center">
+                <div class="text-center">
                     <div class="w-16 md:w-20 h-16 md:h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-globe-asia text-blue-500 text-2xl md:text-3xl"></i>
                     </div>
@@ -747,218 +746,165 @@
                 
                 <div class="flex items-start space-x-3 md:space-x-4">
                     <div class="w-10 h-10 md:w-12 md:h-12 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <i class="fab fa-youtube text-white text-lg md:text-xl"></i>
+                        <i class="fas fa-play text-white text-lg md:text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-base md:text-lg font-semibold text-gray-900">YouTubeコンサルタント兼ディレクター（2年間）</h3>
-                        <p class="text-gray-700 text-sm md:text-base">独立し、ゼロからチャンネルを10万人規模まで成長させる戦略を確立</p>
+                        <h3 class="text-base md:text-lg font-semibold text-gray-900">YouTubeコンサルタント</h3>
+                        <p class="text-gray-700 text-sm md:text-base">登録者0人から10万人へ、月収200万円チャンネルを構築・運営</p>
                     </div>
                 </div>
-                             
+                
                 <div class="flex items-start space-x-3 md:space-x-4">
                     <div class="w-10 h-10 md:w-12 md:h-12 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-edit text-white text-lg md:text-xl"></i>
+                        <i class="fas fa-globe text-white text-lg md:text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-base md:text-lg font-semibold text-gray-900">外資系BPO企業（3.5年間）</h3>
-                        <p class="text-gray-700 text-sm md:text-base">マレーシアにてコンテンツライターとして、グローバル視点を獲得</p>
+                        <h3 class="text-base md:text-lg font-semibold text-gray-900">マレーシア移住・フリーランス</h3>
+                        <p class="text-gray-700 text-sm md:text-base">デジタルマーケティングとInstagram投稿制作を専門に活動</p>
                     </div>
-                </div>
-            </div>
-            
-            <div class="bg-gray-50 rounded-lg p-4 md:p-6 mt-6 md:mt-8">
-                <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-3">持続可能な成功への転換</h3>
-                <div class="text-gray-700 text-sm md:text-base">
-                    <p class="mb-2">YouTubeでの成功体験から、過重労働ではなく「戦略的効率性」による持続可能な成長モデルの重要性を学びました。</p>
-                    <p>この学びを活かし、クライアント様にも長期的な価値創造をご提供いたします。</p>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
         <section class="bg-white rounded-xl card-shadow p-4 md:p-8 mb-8 md:mb-12 fade-in-section">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">よくあるご質問</h2>
-            <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-6 md:mb-8">よくあるご質問</h2>
+            
+            <div class="space-y-4">
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>修正回数に制限はありますか？</span>
-                        <i class="fas fa-plus text-gray-400"></i>
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>制作期間はどのくらいですか？</span>
+                        <i class="fas fa-plus transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>フィード投稿は2回、リール動画は3回まで無料修正いたします。軽微な修正については柔軟に対応いたしますが、大幅な方向転換や追加制作が必要な場合は、別料金・納期調整となる場合があります。</p>
+                        <p>フィード投稿は通常3-5営業日、リール動画は5-7営業日での納品を予定しております。ただし、内容の複雑さやご依頼の混雑状況によって前後する場合がございます。</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>納期はどの程度でしょうか？</span>
-                        <i class="fas fa-plus text-gray-400"></i>
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>修正は何回まで可能ですか？</span>
+                        <i class="fas fa-plus transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>フィード投稿：2-3営業日、リール動画：5-7営業日を目安としています。副業として対応しているため、平日は1日2-3時間、休日にまとめて作業を行います。お急ぎの場合はご相談ください。</p>
+                        <p>基本的に2回まで無料で修正いたします。大幅な方向性の変更や追加制作が必要な場合は、別途ご相談させていただく場合がございます。</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>どのような業界に対応していますか？</span>
-                        <i class="fas fa-plus text-gray-400"></i>
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>どのような業界に対応可能ですか？</span>
+                        <i class="fas fa-plus transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>不動産、飲食店、美容・健康、教育、コンサルティングなど幅広い業界に対応しています。業界特有のトレンドや規制を理解した上で、効果的な投稿を制作いたします。</p>
+                        <p>不動産、飲食、美容、ファッション、教育、BtoB企業など様々な業界に対応可能です。まずはお気軽にご相談ください。業界特有のニーズに合わせた戦略的なアプローチをご提案いたします。</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
                         <span>素材の提供は必要ですか？</span>
-                        <i class="fas fa-plus text-gray-400"></i>
+                        <i class="fas fa-plus transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>基本的にはお客様から商品・サービスの写真や情報をご提供いただきますが、ストック素材やAI画像生成も活用可能です。素材収集からサポートいたします。</p>
+                        <p>お客様の商品やサービスの写真があれば理想的ですが、必須ではありません。AI画像生成やストック素材を活用したクリエイティブ制作も可能です。ご要望に応じて最適な方法をご提案いたします。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="bg-white rounded-xl card-shadow p-4 md:p-8 fade-in-section">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-6 md:mb-8">対応時間・お問い合わせ</h2>
-            
-            <div class="grid gap-6 md:gap-8 md:grid-cols-2">
-                <div>
-                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <i class="fas fa-clock text-blue-500 mr-3"></i>対応時間
-                    </h3>
-                    <div class="space-y-3">
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-envelope text-green-500 mt-1"></i>
-                            <div>
-                                <strong class="text-sm md:text-base">ご連絡対応：</strong>
-                                <p class="text-gray-700 text-sm md:text-base">8時、13時、16時、19時以降に迅速対応</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-laptop text-purple-500 mt-1"></i>
-                            <div>
-                                <strong class="text-sm md:text-base">制作作業：</strong>
-                                <p class="text-gray-700 text-sm md:text-base">平日19時以降、土日祝日</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <i class="fas fa-tools text-blue-500 mr-3"></i>使用可能ツール
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Canva</span>
-                        <span class="bg-purple-100 text-purple-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Photoshop</span>
-                        <span class="bg-red-100 text-red-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Premiere Pro</span>
-                        <span class="bg-green-100 text-green-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Stable Diffusion</span>
-                        <span class="bg-yellow-100 text-yellow-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">Google Workspace</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">ChatGPT</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 md:p-6 mt-6 md:mt-8 text-center">
-                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">まずはお気軽にご相談ください</h3>
-                <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">あなたのアカウントが持つ可能性を最大限に引き出すお手伝いをさせていただければ幸いです。</p>
-                <div class="mb-4 md:mb-6">
-                    <a href="javascript:void(0);" onclick="sendEncodedMail();" class="btn-primary text-lg px-8 py-4">
-                        <i class="fas fa-envelope mr-2"></i>メールで無料相談する
-                    </a>
-                </div>
-                <div class="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-xs md:text-sm text-gray-600">
-                    <span class="flex items-center"><i class="fas fa-shield-alt text-green-500 mr-2"></i>秘密保持契約対応</span>
-                    <span class="flex items-center"><i class="fas fa-handshake text-blue-500 mr-2"></i>初回相談無料</span>
+        <section class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white p-6 md:p-8 text-center fade-in-section">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6">お問い合わせ・ご相談</h2>
+            <p class="text-blue-100 mb-6 md:mb-8 text-sm md:text-base">あなたのInstagramを「戦略的に」成長させませんか？<br>まずはお気軽にご相談ください。</p>
+            <div class="space-y-4">
+                <a href="mailto:contact@example.com?subject=Instagram投稿制作について&body=お疲れ様です。%0D%0A%0D%0AInstagram投稿制作についてお問い合わせいたします。%0D%0A%0D%0A【お名前】%0D%0A%0D%0A【会社名・屋号】%0D%0A%0D%0A【ご希望のサービス】%0D%0A□ フィード投稿制作%0D%0A□ リール動画制作%0D%0A□ スタートアップパッケージ%0D%0A□ その他（　　　　　　　）%0D%0A%0D%0A【ご質問・ご要望】%0D%0A%0D%0A%0D%0Aよろしくお願いいたします。" class="btn-primary inline-block">
+                    <i class="fas fa-envelope mr-2"></i>メールでお問い合わせ
+                </a>
+                <div class="text-blue-100 text-sm">
+                    <p>お見積りは無料です。お気軽にお声がけください。</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 text-white py-6 md:py-8 mt-8 md:mt-12 fade-in-section">
+    <footer class="bg-gray-800 text-white py-6 md:py-8">
         <div class="max-w-6xl mx-auto container-padding text-center">
-            <p class="text-gray-400 text-sm md:text-base">&copy; 2024 HIROKI FUJIKURA. All rights reserved.</p>
+            <p class="text-sm md:text-base">&copy; 2024 HIROKI FUJIKURA. All rights reserved.</p>
+            <p class="text-gray-400 text-xs md:text-sm mt-2">戦略的Instagram投稿制作サービス</p>
         </div>
     </footer>
 
     <script>
-        // スクロールアニメーション
+        // フェードインアニメーション
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('is-visible');
-                    }, index * 100);
+                    entry.target.classList.add('is-visible');
                 }
             });
         }, observerOptions);
-        // すべてのセクションにアニメーションを適用
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.fade-in-section');
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-        // パフォーマンス最適化: 動画の自動再生制御
-        document.addEventListener('DOMContentLoaded', () => {
-            const videos = document.querySelectorAll('video');
-            
-            // Intersection Observer for videos
-            const videoObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    const video = entry.target;
-                    if (entry.isIntersecting) {
-                        video.play().catch(e => console.log('Video play failed:', e));
-                    } else {
-                        video.pause();
-                    }
-                });
-            }, {
-                threshold: 0.5
-            });
 
-            videos.forEach(video => {
-                videoObserver.observe(video);
-            });
+        document.addEventListener('DOMContentLoaded', function() {
+            // すべての fade-in-section 要素を監視
+            const fadeElements = document.querySelectorAll('.fade-in-section');
+            fadeElements.forEach(el => observer.observe(el));
         });
-        
-        // FAQセクション用のJavaScript
-        function toggleFaq(element) {
-            const answer = element.nextElementSibling;
-            const icon = element.querySelector('.fas');
-            
-            const isOpen = answer.classList.contains('open');
-            
-            document.querySelectorAll('.faq-answer').forEach(ans => {
-                ans.classList.remove('open');
-                ans.style.maxHeight = '0';
-            });
-            document.querySelectorAll('.faq-question').forEach(q => {
-                q.classList.remove('active');
-            });
 
+        // FAQ機能
+        function toggleFAQ(questionElement) {
+            const answerElement = questionElement.nextElementSibling;
+            const isOpen = answerElement.classList.contains('open');
+            
+            // 全てのFAQを閉じる
+            document.querySelectorAll('.faq-answer').forEach(answer => {
+                answer.classList.remove('open');
+            });
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.classList.remove('active');
+            });
+            
+            // クリックされた要素が閉じていた場合のみ開く
             if (!isOpen) {
-                element.classList.add('active');
-                answer.classList.add('open');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answerElement.classList.add('open');
+                questionElement.classList.add('active');
             }
         }
-        
-        // メールアドレスエンコード用のJavaScript
-        function sendEncodedMail() {
-            const part1 = 'after.wisdom';
-            const part2 = '.comes.love@';
-            const part3 = 'gmail.com';
-            const email = part1 + part2 + part3;
-            window.location.href = 'mailto:' + email;
+
+        // パフォーマンス最適化: 遅延読み込み
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
         }
+
+        // 動画の自動再生エラーハンドリング
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video[autoplay]');
+            videos.forEach(video => {
+                video.play().catch(e => {
+                    console.log('動画の自動再生ができませんでした:', e);
+                    // 自動再生が失敗した場合、ユーザー操作で再生できるようにする
+                    video.controls = true;
+                });
+            });
+        });
     </script>
 </body>
 </html>
