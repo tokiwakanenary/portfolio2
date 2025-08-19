@@ -203,6 +203,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
         }
         
         @media (min-width: 768px) {
@@ -276,6 +277,99 @@
                 transform: none;
             }
         }
+        
+        /* FAQセクション用のCSS */
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 1rem 0;
+            font-weight: 600;
+            color: #4b5563;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: #1f2937;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            padding: 0 1rem;
+        }
+
+        .faq-answer p {
+            color: #6b7280;
+            line-height: 1.6;
+            padding-bottom: 1rem;
+        }
+
+        .faq-question.active .fas.fa-plus {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer.open {
+            max-height: 200px; /* Adjust based on content height */
+            padding: 1rem 1rem 1.5rem 1rem;
+        }
+
+        /* 新しいボタンのCSS */
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            text-align: center;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        /* 割引表示用CSS */
+        .discount-label {
+            display: inline-block;
+            background-color: #f0fdf4;
+            color: #166534;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            margin-top: 0.5rem;
+            white-space: nowrap;
+        }
+        
+        .service-pricing-wrap {
+            height: 48px; /* 割引表記を配置するスペースを確保 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        
+        .service-pricing-wrap.no-discount {
+            height: 48px;
+            margin-top: 0.5rem;
+        }
+        
+        .service-card.startup {
+            border: 2px solid #667eea;
+        }
+
     </style>
 </head>
 <body class="bg-gray-50 font-noto">
@@ -313,7 +407,7 @@
         </section>
 
         <section class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white p-4 md:p-8 mb-8 md:mb-12 fade-in-section">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">実績</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">YouTube運営実績</h2>
             <div class="grid gap-6 md:gap-8 md:grid-cols-3 text-center">
                 <div>
                     <div class="text-3xl md:text-4xl font-bold mb-2">0→10万人</div>
@@ -328,7 +422,7 @@
                     <p class="text-blue-100 text-sm md:text-base">動画最大再生数</p>
                 </div>
             </div>
-            <p class="text-left text-blue-100 mt-4 md:mt-6 text-xs md:text-sm">※NDA（秘密保持契約）のため、ポートフォリオ上でチャンネル名は公開できませんが、実績に基づく戦略的アプローチをご提供いたします。</p>
+            <p class="text-center text-blue-100 mt-4 md:mt-6 text-xs md:text-sm">※NDA（秘密保持契約）のため、ポートフォリオ上でチャンネル名は公開できませんが、実績に基づく戦略的アプローチをご提供いたします。</p>
         </section>
         
         <section class="mb-8 md:mb-12 fade-in-section">
@@ -345,7 +439,10 @@
                             <p class="text-2xl md:text-3xl font-bold text-gradient mt-2">3,000円～</p>
                             <p class="text-sm text-gray-600">1投稿あたり</p>
                         </div>
-                        <ul class="text-sm text-gray-700 space-y-2">
+                        <div class="service-pricing-wrap">
+                            <span class="discount-label">5投稿パック: 14,250円（5%OFF）</span>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-2 mt-4">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Canva, Photoshop, Stable Diffusion対応</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>心を掴むコピーライティング</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>戦略的ハッシュタグ選定</li>
@@ -363,7 +460,10 @@
                             <p class="text-2xl md:text-3xl font-bold text-gradient mt-2">12,000円～</p>
                             <p class="text-sm text-gray-600">1本あたり</p>
                         </div>
-                        <ul class="text-sm text-gray-700 space-y-2">
+                        <div class="service-pricing-wrap">
+                            <span class="discount-label">3本パック: 34,200円（5%OFF）</span>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-2 mt-4">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Premiere Pro等での高品質編集</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>BGM選定・テロップ・エフェクト</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>15～60秒の最適な企画設計</li>
@@ -371,18 +471,20 @@
                     </div>
                 </div>
 
-                <div class="service-card border-2 border-blue-200">
+                <div class="service-card startup">
                     <div class="service-card-content">
                         <div class="text-center mb-6">
                             <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i class="fas fa-rocket text-white text-2xl"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-900">スタートアップパッケージ</h3>
-                            <p class="text-2xl md:text-3xl font-bold text-gradient mt-2">50,000円～</p>
+                            <p class="text-2xl md:text-3xl font-bold text-gradient mt-2">60,000円～</p>
                             <p class="text-sm text-gray-600">月額</p>
-                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mt-2">おすすめ</span>
                         </div>
-                        <ul class="text-sm text-gray-700 space-y-2">
+                        <div class="service-pricing-wrap">
+                            <span class="discount-label">3ヶ月契約: 50,000円/月（17%OFF）</span>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-2 mt-4">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>週2投稿（フィード1, リール1）</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>月1回の戦略ミーティング（Zoom）</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>競合分析レポート</li>
@@ -393,7 +495,7 @@
             </div>
         </section>
 
-      <section class="bg-white rounded-xl card-shadow p-6 md:p-8 mb-8 md:mb-12">
+      <section class="bg-white rounded-xl card-shadow p-6 md:p-8 mb-8 md:mb-12 fade-in-section">
             <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">制作プロセス（5ステップ）</h2>
             <div class="grid gap-6 md:grid-cols-5">
                 <div class="text-center">
@@ -611,8 +713,10 @@
                     <div class="w-16 md:w-20 h-16 md:h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-globe-asia text-blue-500 text-2xl md:text-3xl"></i>
                     </div>
-                    <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">海外在住のグローバルな視点</h3>
-                    <p class="text-gray-700 text-sm md:text-base">現在マレーシアに在住しており、日本の常識に縛られないユニークな切り口のコンテンツをご提案します。</p>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">海外在住のグローバルな視点</h3>
+                        <p class="text-gray-700 text-sm md:text-base">現在マレーシアに在住しており、日本の常識に縛られないユニークな切り口のコンテンツをご提案します。</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -671,6 +775,52 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section class="bg-white rounded-xl card-shadow p-4 md:p-8 mb-8 md:mb-12 fade-in-section">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">よくあるご質問</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>修正回数に制限はありますか？</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>フィード投稿は2回、リール動画は3回まで無料修正いたします。軽微な修正については柔軟に対応いたしますが、大幅な方向転換や追加制作が必要な場合は、別料金・納期調整となる場合があります。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>納期はどの程度でしょうか？</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>フィード投稿：2-3営業日、リール動画：5-7営業日を目安としています。副業として対応しているため、平日は1日2-3時間、休日にまとめて作業を行います。お急ぎの場合はご相談ください。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>どのような業界に対応していますか？</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>不動産、飲食店、美容・健康、教育、コンサルティングなど幅広い業界に対応しています。業界特有のトレンドや規制を理解した上で、効果的な投稿を制作いたします。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>素材の提供は必要ですか？</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>基本的にはお客様から商品・サービスの写真や情報をご提供いただきますが、ストック素材やAI画像生成も活用可能です。素材収集からサポートいたします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="bg-white rounded-xl card-shadow p-4 md:p-8 fade-in-section">
             <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-6 md:mb-8">対応時間・お問い合わせ</h2>
             
@@ -716,8 +866,8 @@
                 <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">まずはお気軽にご相談ください</h3>
                 <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">あなたのアカウントが持つ可能性を最大限に引き出すお手伝いをさせていただければ幸いです。</p>
                 <div class="mb-4 md:mb-6">
-                    <a href="mailto:after.wisdom.comes.love@gmail.com" class="text-base md:text-lg text-gray-800 hover:text-blue-600 transition-colors duration-300 break-all">
-                        <i class="fas fa-envelope mr-2"></i>after.wisdom.comes.love@gmail.com
+                    <a href="javascript:void(0);" onclick="sendEncodedMail();" class="btn-primary text-lg px-8 py-4">
+                        <i class="fas fa-envelope mr-2"></i>メールで無料相談する
                     </a>
                 </div>
                 <div class="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-xs md:text-sm text-gray-600">
@@ -778,6 +928,37 @@
                 videoObserver.observe(video);
             });
         });
+        
+        // FAQセクション用のJavaScript
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.fas');
+            
+            const isOpen = answer.classList.contains('open');
+            
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                ans.classList.remove('open');
+                ans.style.maxHeight = '0';
+            });
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.classList.remove('active');
+            });
+
+            if (!isOpen) {
+                element.classList.add('active');
+                answer.classList.add('open');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        }
+        
+        // メールアドレスエンコード用のJavaScript
+        function sendEncodedMail() {
+            const part1 = 'after.wisdom';
+            const part2 = '.comes.love@';
+            const part3 = 'gmail.com';
+            const email = part1 + part2 + part3;
+            window.location.href = 'mailto:' + email;
+        }
     </script>
 </body>
 </html>
